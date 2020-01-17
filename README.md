@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) React ATM application
 
-## Available Scripts
+--------
 
-In the project directory, you can run:
+Let's practice modifying an existing codebase. This repository contains the code for existing ATM application using React. In it, you can currently deposit money into a checking account.
 
-### `npm start`
+You'll be adding a few features to this:
+- The ability to withdraw money
+- Having a savings account as well as a checking account
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In the end, your solution will look like this:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<img width="992" alt="atm" src="https://cloud.githubusercontent.com/assets/4304660/24376818/18c39a82-12f2-11e7-81e7-af618c22b3ed.png">
 
-### `npm test`
+--------
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setting up:
 
-### `npm run build`
+- Fork and then clone this repo
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Run `npm install` (or `npm i` for short!)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- To launch the app, run `npm start`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- The code that's running is in the `/src` directory - that's what you need to change!
 
-### `npm run eject`
+You can do the below tasks in any order you'd like.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+--------
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Turning in:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Remember to make a pull request with your completed work in order to be given credit for this assignment
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---------
 
-## Learn More
+## Task:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Currently, you can see that there is a Checking account where a user can deposit money. Try it out - it works!
+- Create a "Withdraw" button next to the "Deposit" button.
+  - You should not be able to withdraw more than the current balance.
+- Create a Savings account - another component of the same class.
+  - It will have the same deposit (and eventual withdraw) functionality.
+- You cannot type negative numbers in to either withdraw or deposit.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-------
 
-### Code Splitting
+### Hints:
+<details>
+<summary>Stuck on making a Savings account? Here's a hint:</summary>
+The <code>name</code> prop being passed into <code>Account</code> is "Checking" - perhaps you can just call the component again for "Savings".   
+</details>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<details>
+<summary>Stuck on making a Withdraw button? Here's a hint:</summary>
+Functionality to withdraw money is quite similar to functionality for depositing money, except with subtraction instead of addition.
+</details>
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<details>
+<summary>Stuck on limiting negative numbers? Here's a hint:</summary>
+When a function checks if the input is a number (with <code>isNaN</code>), an <code>||</code> condition could be added to be sure the input is not less than 0.
+</details>
