@@ -26,13 +26,6 @@ In the end, your solution will look like this:
 
 You can do the below tasks in any order you'd like.
 
---------
-
-## Turning in:
-
-Remember to make a pull request with your completed work in order to be given credit for this assignment
-
----------
 
 ## Task:
 
